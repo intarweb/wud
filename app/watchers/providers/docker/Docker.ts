@@ -913,7 +913,7 @@ class Docker extends Watcher {
         if (!isSemver && !watchDigest) {
             this.ensureLogger();
             this.log.warn(
-                "Image is not a semver and digest watching is disabled so wud won't report any update. Please review the configuration to enable digest watching for this container or exclude this container from being watched",
+                `Image ${parsedImage.path}:${tagName} (container "${containerName}", id ${containerId}) is not a semver and digest watching is disabled so wud won't report any update. Set the label \`wud.watch.digest=true\` on this container to enable digest watching, or set \`wud.watch=false\` to exclude it from being watched.`,
             );
         }
         return normalizeContainer({
