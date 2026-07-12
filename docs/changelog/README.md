@@ -7,6 +7,7 @@
 - :fire: Fix digest comparison for single-platform manifests resolved from a manifest list
 - :fire: [NTFY] - Fix basic auth
 - :fire: [UI] - Fix container filters on mobile
+- :fire: [ECR] - Use link header for pagination
 - :wrench: Add multi-stage UI build to Dockerfile
 
 ## 8.2.2
