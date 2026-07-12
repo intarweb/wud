@@ -43,5 +43,35 @@ COPY --from=ui-dependencies /home/node/app/dist/ ./ui
 # Copy app source
 COPY app/ ./
 
+# Build
+RUN npm run build
+
+# Remove dev dependencies
+RUN npm prune --omit=dev
+
+# UI Build stage
+FROM base AS ui-build
+WORKDIR /home/node/ui
+COPY ui/package*.json ./
+RUN npm ci --include=dev --omit=optional --no-audit --no-fund --no-update-notifier
+COPY ui/ ./
+RUN npm run build
+
+# Release stage
+FROM base AS release
+
+# Default entrypoint
+COPY Docker.entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
-CMD ["node", "index"]
+CMD ["node", "dist/index"]
+
+## Copy node_modules
+COPY --from=build /home/node/app/node_modules ./node_modules
+
+# Copy app (dist)
+COPY --from=build /home/node/app/dist ./dist
+COPY --from=build /home/node/app/package.json ./package.json
+
+# Copy ui
+COPY --from=ui-build /home/node/ui/dist ./ui
