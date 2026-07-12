@@ -12,6 +12,7 @@
 - :fire: [UI] - Fix container filters on mobile
 - :fire: [ECR] - Use link header for pagination
 - :fire: Fix Passport auth
+- :fire: [DOCKER-COMPOSE] - Fix services without images
 - :lock: Update OIDC library
 - :wrench: Add multi-stage UI build to Dockerfile
 - :wrech: Add Playwright e2e tests
