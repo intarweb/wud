@@ -3,6 +3,7 @@
 ## next
 - :star: Add opt-in mode for trigger association
 - :star: Add SOCKS5/HTTP proxy support to Telegram trigger
+- :star: Add runtime subpath proxy support with WUD_SERVER_BASEPATH
 - :fire: Fix digest comparison for single-platform manifests resolved from a manifest list
 
 ## 8.2.2
