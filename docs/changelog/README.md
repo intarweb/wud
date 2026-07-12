@@ -11,6 +11,7 @@
 - :fire: [UI] - Fix container filters on mobile
 - :fire: [ECR] - Use link header for pagination
 - :wrench: Add multi-stage UI build to Dockerfile
+- :wrench: Update OIDC library
 
 ## 8.2.2
 - :star: Add public Codeberg registry (codeberg.org) to the list of default supported registries
