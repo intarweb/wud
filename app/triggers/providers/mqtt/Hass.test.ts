@@ -36,7 +36,6 @@ beforeEach(async () => {
         publish: jest.fn(() => {}),
     };
     hass = new Hass({
-        client: mqttClientMock,
         configuration: {
             topic: 'topic',
             hass: {
@@ -46,6 +45,7 @@ beforeEach(async () => {
         },
         log,
     });
+    await hass.init(mqttClientMock);
 });
 
 test('publishDiscoveryMessage must publish a discovery message expected by HA', async () => {

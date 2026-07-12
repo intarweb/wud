@@ -2,7 +2,7 @@ import { ECRClient, GetAuthorizationTokenCommand } from '@aws-sdk/client-ecr';
 import { ContainerImage } from '../../../model/container';
 import axios, { AxiosRequestConfig } from 'axios';
 import joi from 'joi';
-import Registry from '../../Registry';
+import Registry, { RegistryTagsList } from '../../Registry';
 
 const ECR_PUBLIC_GALLERY_HOSTNAME = 'public.ecr.aws';
 
