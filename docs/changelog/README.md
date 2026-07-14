@@ -7,6 +7,7 @@
 - :star: Add ENV option for watch digest default
 - :star: [MQTT] - Improve trigger
 - :star: [DISCORD] - Add avatar URL support
+- :star: [DOCKER-COMPOSE] - Use com.docker.compose.project.config_files label by default
 - :fire: Fix digest comparison for single-platform manifests resolved from a manifest list
 - :fire: [NTFY] - Fix basic auth
 - :fire: [UI] - Fix container filters on mobile
@@ -16,7 +17,7 @@
 - :fire: Fix txt log format
 - :lock: Update OIDC library
 - :wrench: Add multi-stage UI build to Dockerfile
-- :wrech: Add Playwright e2e tests
+- :wrench: Add Playwright e2e tests
 
 ## 8.2.2
 - :star: Add public Codeberg registry (codeberg.org) to the list of default supported registries
