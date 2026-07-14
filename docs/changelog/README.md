@@ -1,6 +1,6 @@
 # Changelog
 
-## next
+## 8.3.0
 - :star: Add opt-in mode for trigger association
 - :star: Add SOCKS5/HTTP proxy support to Telegram trigger
 - :star: Add runtime subpath proxy support with WUD_SERVER_BASEPATH
