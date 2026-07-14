@@ -44,6 +44,7 @@ identity_providers:
         client_secret: this-is-a-very-secure-secret
         public: false
         authorization_policy: one_factor
+        token_endpoint_auth_method: client_secret_post
         audience: []
         scopes:
           - openid
