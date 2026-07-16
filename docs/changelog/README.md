@@ -1,5 +1,8 @@
 # Changelog
 
+## next
+- :fire: [DOCKER-COMPOSE] - Fix trigger fails to detect containers in compose file
+
 ## 8.3.0
 - :star: Add opt-in mode for trigger association
 - :star: Add SOCKS5/HTTP proxy support to Telegram trigger
